@@ -320,3 +320,10 @@ body {
 .hidden {
   display: none;
 }
+
+/* ms edge detection */
+@supports (-ms-accelerator: true) or (-ms-ime-align: auto) {
+  .icon::before {
+    left: 0;
+  }
+}
