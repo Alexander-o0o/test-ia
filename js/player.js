@@ -248,7 +248,7 @@ class Player {
     const rounded = Math.round(value * rounding);
     const roundedPrev = Math.round(valuePrev * rounding);
 
-    if (rounded > roundedPrev || roundedPrev === rounding) {
+    if (Math.abs(rounded - roundedPrev) > 0 || roundedPrev === rounding) {
       this._playbackProgressBar.value = value;
       this._updateTimeLabels(value);
     }

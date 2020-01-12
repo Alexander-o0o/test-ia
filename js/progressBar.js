@@ -45,7 +45,7 @@ class PropgressBar {
   }
 
   _coordinateToValue(event) {
-    const delta = event.clientX - this._boundingRect.x;
+    const delta = event.clientX - this._boundingRect.left;
 
     let value = delta < 0 ? 0 : delta;
     value = delta > this._boundingRect.width
